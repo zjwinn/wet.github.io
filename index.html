@@ -16,108 +16,186 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #1a1a1a;
             color: #ffffff;
-            overflow: hidden; /* Prevents scrollbars on full-page view */
         }
 
-        /* Header Styling */
+        /* Header Styling (White) */
         .header {
             text-align: center;
             padding: 20px 0;
             font-size: 1.2em;
             letter-spacing: 2px;
             font-weight: 400;
-            border-bottom: 1px solid #333;
+            background-color: #ffffff; /* White background */
+            color: #1a1a1a; /* Black text */
+            border-bottom: 1px solid #e0e0e0; /* Light grey border */
         }
 
-        /* Main Content Grid Layout */
-        .main-container {
+        /* --- Main Hero Section --- */
+        .hero-container {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            grid-template-columns: 1fr 1fr;
             width: 100%;
-            height: calc(100vh - 70px); /* Full viewport height minus header */
+            height: calc(100vh - 70px);
+            background-color: #1a1a1a;
+            color: #ffffff;
         }
 
-        /* Left Column for Image */
-        .image-column {
-            background-image: url('./static_images/cover_image.jpg'); /* Updated Image URL */
+        .hero-image-column {
+            background-image: url('./static_images/cover_image.jpg');
             background-size: cover;
             background-position: center;
         }
 
-        /* Right Column for Text Content */
-        .content-column {
+        .hero-content-column {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 5%; /* Padding for spacing */
+            padding: 0 5%;
             box-sizing: border-box;
+            text-align: left;
         }
 
-        .content-column h1 {
+        .hero-content-column h1 {
             font-size: 3em;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .content-column p {
+        .hero-content-column p {
             font-size: 1.1em;
             line-height: 1.6;
             margin-bottom: 30px;
             color: #cccccc;
         }
-
-        /* Button Styling */
-        .cta-button {
-            display: inline-block;
-            background-color: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            padding: 15px 30px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
-
-        .cta-button:hover {
-            background-color: #ffffff;
-            color: #1a1a1a;
-        }
         
-        /* Phone Number Styling */
         .phone-number {
             font-size: 1.2em;
             font-weight: bold;
         }
 
-        /* Responsive Design for smaller screens */
+        /* --- About Section --- */
+        .about-section {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            padding: 60px 5%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .about-section h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+            text-align: left;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .mission-text h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .mission-text p {
+            font-size: 1em;
+            line-height: 1.7;
+            color: #555555;
+        }
+
+        /* --- Facebook / Reviews Section --- */
+        .reviews-section {
+            background-color: #333;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .reviews-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .reviews-box {
+            background-color: #222;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .reviews-box p {
+            font-size: 1.1em;
+        }
+
+        .facebook-button {
+            display: inline-block;
+            background-color: #1877f2;
+            color: white;
+            text-decoration: none;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .facebook-button:hover {
+            background-color: #166fe5;
+        }
+
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr; /* Stack columns on top of each other */
+            .hero-container, .about-content {
+                grid-template-columns: 1fr;
                 height: auto;
             }
 
-            .image-column {
-                height: 300px; /* Give the image a fixed height */
+            .hero-image-column {
+                height: 300px;
             }
 
-            .content-column {
+            .hero-content-column {
                 padding: 40px 20px;
                 text-align: center;
                 align-items: center;
             }
 
-            .content-column h1 {
+            .hero-content-column h1, .about-section h2, .reviews-section h2 {
                 font-size: 2.2em;
             }
-        }
+            
+            .about-content {
+                text-align: center;
+            }
 
+            .mission-text {
+                padding: 0 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -126,15 +204,40 @@
         WINN ENVIROMENTAL TECH, LCC
     </header>
 
-    <main class="main-container">
-        <div class="image-column">
+    <main>
+        
+        <section class="hero-container">
+            <div class="hero-image-column"></div>
+            <div class="hero-content-column">
+                <h1>EXPERT WATER AND WASTE WATER MANAGEMENT CONSULTING</h1>
+                <p>Trusted solutions for health inspections since 2014 in Arkansas.</p>
+                <div class="phone-number">+1.4795301657</div>
             </div>
-        <div class="content-column">
-            <h1>EXPERT WATER AND WASTE WATER MANAGEMENT CONSULTING</h1>
-            <p>Trusted solutions for health inspections since 2014 in Arkansas.</p>
-            <a href="#" class="cta-button">GET STARTED</a>
-            <div class="phone-number">+1.4795301657</div>
-        </div>
+        </section>
+
+        <section class="about-section">
+            <h2>ABOUT WINN ENVIRONMENTAL TECH, LLC</h2>
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <img src="./static_images/mission_image.jpg" alt="Seal of Arkansas" class="about-image">
+                </div>
+                <div class="mission-text">
+                    <h3>Our Mission</h3>
+                    <p>At Winn Environmental Tech, LLC, our mission is to provide exceptional water and wastewater management services to the Northwest Arkansas community. Since 2014, we have been dedicated to ensuring the safety and quality of water through rigorous inspections and testing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <h2>WHAT OUR CLIENTS SAY: REAL STORIES, REAL IMPACT</h2>
+            <div class="reviews-box">
+                <p>See our client reviews and project updates on our Facebook page.</p>
+                <a href="https://www.facebook.com/WinnEnvironmentalTech" target="_blank" rel="noopener noreferrer" class="facebook-button">
+                    Visit us on Facebook
+                </a>
+            </div>
+        </section>
+
     </main>
 
 </body>
