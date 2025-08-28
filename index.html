@@ -1,3 +1,141 @@
-<h1> 
-	Hello World!
-<h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winn Enviromental Tech, LCC</title>
+    <style>
+        /* Basic Resets and Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            overflow: hidden; /* Prevents scrollbars on full-page view */
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            font-weight: 400;
+            border-bottom: 1px solid #333;
+        }
+
+        /* Main Content Grid Layout */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            width: 100%;
+            height: calc(100vh - 70px); /* Full viewport height minus header */
+        }
+
+        /* Left Column for Image */
+        .image-column {
+            background-image: url('https://i.imgur.com/uG9n4m3.jpeg'); /* Placeholder Image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Right Column for Text Content */
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5%; /* Padding for spacing */
+            box-sizing: border-box;
+        }
+
+        .content-column h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .content-column p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #cccccc;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+        
+        /* Phone Number Styling */
+        .phone-number {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr; /* Stack columns on top of each other */
+                height: auto;
+            }
+
+            .image-column {
+                height: 300px; /* Give the image a fixed height */
+            }
+
+            .content-column {
+                padding: 40px 20px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .content-column h1 {
+                font-size: 2.2em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        WINN ENVIROMENTAL TECH, LCC
+    </header>
+
+    <main class="main-container">
+        <div class="image-column">
+            </div>
+        <div class="content-column">
+            <h1>EXPERT WATER AND WASTE WATER MANAGEMENT CONSULTING</h1>
+            <p>Trusted solutions for health inspections since 2014 in Arkansas.</p>
+            <a href="#" class="cta-button">GET STARTED</a>
+            <div class="phone-number">+1.4795301657</div>
+        </div>
+    </main>
+
+</body>
+</html>
