@@ -73,6 +73,11 @@
             font-size: 1.2em;
             font-weight: bold;
         }
+ 
+        .email-address {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
 
         /* --- About Section --- */
         .about-section {
@@ -83,7 +88,7 @@
             box-sizing: border-box;
         }
 
-        .about-section h2 {
+        .section-title {
             font-size: 2.5em;
             font-weight: 700;
             margin-bottom: 50px;
@@ -131,11 +136,6 @@
             text-align: center;
         }
 
-        .reviews-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
         .reviews-box {
             background-color: #222;
             padding: 40px;
@@ -166,10 +166,76 @@
             background-color: #166fe5;
         }
 
+        /* --- Contact Section (New) --- */
+        .contact-section {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            padding: 60px 5%;
+            box-sizing: border-box;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-form h3, .contact-info h3 {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #444;
+        }
+        
+        .contact-info p {
+            font-size: 1em;
+            line-height: 1.7;
+            color: #555555;
+        }
+
+        .contact-info .company-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-container, .about-content {
+            .hero-container, .about-content, .contact-container {
                 grid-template-columns: 1fr;
                 height: auto;
             }
@@ -184,12 +250,16 @@
                 align-items: center;
             }
 
-            .hero-content-column h1, .about-section h2, .reviews-section h2 {
+            .section-title, .hero-content-column h1 {
                 font-size: 2.2em;
             }
             
-            .about-content {
+            .about-content, .contact-container {
                 text-align: center;
+            }
+            
+            .contact-form, .contact-info {
+                text-align: left;
             }
 
             .mission-text {
@@ -209,32 +279,54 @@
         <section class="hero-container">
             <div class="hero-image-column"></div>
             <div class="hero-content-column">
-                <h1>EXPERT WATER AND WASTE WATER MANAGEMENT CONSULTING</h1>
-                <p>Trusted solutions for health inspections since 2014 in Arkansas.</p>
-                <div class="phone-number">+1.4795301657</div>
+                <h1>EXPERT WATER, WASTEWATER, AND SOLID WASTE MANAGEMENT CONSULTING</h1>
+                <p>Trusted Soluction Since 2011.</p>
+                <div class="phone-number">Phone: 479-530-1657</div>
+                <div class="email-address">Email: winwinn5@aol.com</div>
+
             </div>
         </section>
 
         <section class="about-section">
-            <h2>ABOUT WINN ENVIRONMENTAL TECH, LLC</h2>
+            <h2 class="section-title">ABOUT WINN ENVIRONMENTAL TECH, LLC</h2>
             <div class="about-content">
                 <div class="about-image-wrapper">
-                    <img src="./static_images/mission_image.jpg" alt="Seal of Arkansas" class="about-image">
+                    <img src="./static_images/mission_image.jpg" alt="WET Logo" class="about-image">
                 </div>
                 <div class="mission-text">
                     <h3>Our Mission</h3>
-                    <p>At Winn Environmental Tech, LLC, our mission is to provide exceptional water and wastewater management services to the Northwest Arkansas community. Since 2014, we have been dedicated to ensuring the safety and quality of water through rigorous inspections and testing.</p>
+                    <p>At Winn Environmental Tech, LLC, our mission is to provide exceptional water, wastewater, and solid waste management services to Arkansas' community. Since 2011, we have been dedicated to ensuring the safety and quality of environmental conditions through rigorous inspections and testing.</p>
                 </div>
             </div>
         </section>
 
         <section class="reviews-section">
-            <h2>WHAT OUR CLIENTS SAY: REAL STORIES, REAL IMPACT</h2>
+            <h2 class="section-title">WHAT OUR CLIENTS SAY: REAL STORIES, REAL IMPACT</h2>
             <div class="reviews-box">
                 <p>See our client reviews and project updates on our Facebook page.</p>
                 <a href="https://www.facebook.com/WinnEnvironmentalTech" target="_blank" rel="noopener noreferrer" class="facebook-button">
-                    Visit us on Facebook
+                    Visit us on Facebook!
                 </a>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title" style="text-align: center;">CONTACT US</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Drop us a line!</h3>
+                    <form action="mailto:winwinn5@aol.com" method="post" enctype="text/plain">
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="Email" placeholder="Email*" required>
+                        <textarea name="Message" placeholder="Message" required></textarea>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p class="company-name">Winn Enviromental Tech, LCC</p>
+                    <p>P: +1-479-530-1657</p>
+                    <p>E: winwinn5@aol.com</p>
+                </div>
             </div>
         </section>
 
